@@ -11,15 +11,15 @@
 // Una vez creada la función, utilícela para escribir un programa que asigne al texto de cada
 // párrafo de un documento HTML un color aleatorio.
 
-function rgb(){
+function aleatorio(){
     let red = Math.floor(Math.random() * (255 - 0) + 0);
     let green = Math.floor(Math.random() * (255 - 0) + 0);
     let blue = Math.floor(Math.random() * (255 - 0) + 0);
-    return(red, green, blue);
+    return `rgb(${red}, ${green}, ${blue})`;
 }
 let x = document.querySelectorAll('.mainContainer p');
 
 for(let g = 0; g < x.length; g++){
-    x[g].style.color = rgb()
+    x[g].style.color = aleatorio()
 }
-console.log(rgb());
+console.log(aleatorio());
